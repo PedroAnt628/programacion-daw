@@ -27,6 +27,9 @@ public class App {
     int b='b'; //UN caracter se guarda en un enteor segun ASCII
     char c=98;
     System.out.println(b+" "+c);
+    
+        System.out.println("un texto cualquiera");
+        System.err.println("un bonito error");
 
     }
     /**
