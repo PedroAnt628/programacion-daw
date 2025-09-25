@@ -4,9 +4,9 @@ public class App {
 
     public static void main(String[] args) throws Exception {
        System.out.println("Hello, World!");
-    String nombre="soy pedro";
-    int edad=19;
-    double salario=16.5464564;
+    // String nombre="soy pedro";
+    // int edad=19;
+    // double salario=16.5464564;
     
     // int numero entero
     // double numero real/decimal
@@ -40,6 +40,5 @@ public class App {
      */
 
     public static void imprimirTexto(String texto){
-        int logico=3;
     }
 }
