@@ -1,4 +1,3 @@
-package actividades;
 
 public class actividades {
 
