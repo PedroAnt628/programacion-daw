@@ -38,7 +38,7 @@ public class bucles {
             numero=teclado.nextInt();
         
         } while(numero<1||numero>5);
-
+        teclado.close();
 
     }
 }
