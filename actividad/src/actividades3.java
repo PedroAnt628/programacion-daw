@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.print.attribute.standard.Media;
 
 public class actividades3 {
     public static void main(String[] args) {
@@ -42,17 +43,61 @@ public class actividades3 {
     // }while (edad!=-1);
     // System.out.println("El maximo es "+max);
     // System.out.println("El minimo es "+min);
+    // teclado.close();
 
-    //Atividad 4
+    //Actividad 4
+    // Scanner teclado=new Scanner(System.in);
+    // int edad;
+    // int contadorPersonas=0;
+    // int suma=0;
+    // int mayoresEdad=0;
+    // double media;
+    // do{
+    //     System.out.println("Introduce un munero o -1 para salir");
+    //     edad=teclado.nextInt();
+    //     if (edad!=-1) contadorPersonas++;
+    //     media=suma/contadorPersonas;
+    //     suma=suma+(edad!=-1?edad:0);
+    //     if (edad>=18) mayoresEdad++;
+
+    // } while (edad!=-1);
+    // System.out.println("La suma de las edades es: "+suma);
+    // System.out.println("La media de las edades es: "+media);
+    // System.out.println("El número de alumnos es: "+contadorPersonas);
+    // System.out.println("El número de mayores de edad es: "+mayoresEdad);
+
+    // teclado.close();
+
+
+    //Actividad 5
+    //Inicio
+    //Introducir un numero
+    //Generar numero aleatorio entre 1 y 100
+    //Si numero introducido es mayor que el aleatorio
+    //Decir que es mayor
+    //Si numero introducido es menor que el aleatorio
+    //Decir que es menor
+    //Contar intentos
+    //Fin
+
+    int tries=0, min=1, max=100;
     Scanner teclado=new Scanner(System.in);
-    int edad;
-    int contadorPersonas=0;
-    do{
-        System.out.println("Introduce un munero o -1 para salir");
-        edad=teclado.nextInt();
-        if (edad!=-1) contadorPersonas++;
-        double media=(edad+edad)/2.0;
+        System.err.println("Introduce tu numero");
+        int numero=teclado.nextInt();
 
-    } while ();
+
+    int aleatorio=(int)(Math.random()*(max-min+1))+min;
+    while (numero!=aleatorio){
+        if (numero>aleatorio){
+            System.out.println("El numero es mayor");
+        } else {
+            System.out.println("El numero es menor");
+        }
+        System.out.println("Introduce otro numero");
+        numero=teclado.nextInt();
+        tries++;
+    }
+    System.out.println("Has acertado en "+tries+" intentos");
+    teclado.close();
 }
 }
