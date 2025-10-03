@@ -110,7 +110,7 @@ public class actividades3 {
     do {
         System.out.println("Introduce un numero o -1 para salir");
         numer1=teclado.nextInt();
-        if (numer1==-1);
+        if (numer1==-1)break;
         System.out.println("Introduce otro numero");
         numero2=teclado.nextInt();
         System.out.println("Elige una opcion: 1.Sumar 2.Restar 3.Multiplicar 4.Dividir");
