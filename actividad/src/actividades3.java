@@ -80,24 +80,67 @@ public class actividades3 {
     //Contar intentos
     //Fin
 
-    int tries=0, min=1, max=100;
+    // int tries=0, min=1, max=100;
+    // Scanner teclado=new Scanner(System.in);
+    //     System.err.println("Introduce tu numero");
+    //     int numero=teclado.nextInt();
+
+
+    // int aleatorio=(int)(Math.random()*(max-min+1))+min;
+    // while (numero!=aleatorio){
+    //     if (numero>aleatorio){
+    //         System.out.println("El numero es mayor");
+    //     } else {
+    //         System.out.println("El numero es menor");
+    //     }
+    //     System.out.println("Introduce otro numero");
+    //     numero=teclado.nextInt();
+    //     tries++;
+    // }
+    // System.out.println("Has acertado en "+tries+" intentos");
+    // teclado.close();
+
+    //Actividad 6 Desarrolla un programa que simule una calculadora
+    // según la opción introducida y que pida los operandos
+    // hasta que introduces -1
     Scanner teclado=new Scanner(System.in);
-        System.err.println("Introduce tu numero");
-        int numero=teclado.nextInt();
-
-
-    int aleatorio=(int)(Math.random()*(max-min+1))+min;
-    while (numero!=aleatorio){
-        if (numero>aleatorio){
-            System.out.println("El numero es mayor");
-        } else {
-            System.out.println("El numero es menor");
-        }
+    int numer1;
+    int numero2;
+    int operacion;
+    do {
+        System.out.println("Introduce un numero o -1 para salir");
+        numer1=teclado.nextInt();
+        if (numer1==-1);
         System.out.println("Introduce otro numero");
-        numero=teclado.nextInt();
-        tries++;
-    }
-    System.out.println("Has acertado en "+tries+" intentos");
+        numero2=teclado.nextInt();
+        System.out.println("Elige una opcion: 1.Sumar 2.Restar 3.Multiplicar 4.Dividir");
+        operacion=teclado.nextInt();
+        switch (operacion){
+            case 1:
+                System.out.println("La suma es: "+(numer1+numero2));
+                break;
+            case 2:
+                System.out.println("La resta es: "+(numer1-numero2));
+                break;
+            case 3:
+                System.out.println("La multiplicacion es: "+(numer1*numero2));
+                break;
+            case 4:
+                if (numero2!=0){
+                    System.out.println("La division es: "+(numer1/numero2));
+                } else {
+                    System.out.println("No se puede dividir entre 0");
+                }
+                break;
+            default:
+                System.out.println("Opcion no valida");
+        }
+    } while (numer1!=-1);
     teclado.close();
+
+
+
+
+    
 }
 }
