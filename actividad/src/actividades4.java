@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class actividades4 {
-// //Crea un procedimiento para calcular el área y volumen
-// //de un cilindro (2*PI*(altura+radio), PI*radio2*altura)
+ //Crea un procedimiento para calcular el área y volumen
+ //de un cilindro (2*PI*(altura+radio), PI*radio2*altura)
 
 //     final static double PI=3.14159;  
 //     public static void main(String[] args) {
