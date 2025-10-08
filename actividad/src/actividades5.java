@@ -1,5 +1,6 @@
 public class actividades5 {
-    //Ejercicio 1
+    //Ejercicio 1 Pagina 27
+    //Función que devuelve la cantidad de dígitos de un númeropositivo
 
     //Contar los digitos de un numero
     // public static int digitos(int n){
@@ -23,7 +24,10 @@ public class actividades5 {
     //     System.out.println(digitos(200));
     // }
 
-    //Ejercicio 2
+
+
+    //Ejercicio 2 Pagina 27
+    //Función que devuelve la suma de los números naturales desde 1hasta N
 
     // public static int suma(int n){
     //     if (n==1){
@@ -36,8 +40,11 @@ public class actividades5 {
     //     System.out.println(suma(5));
     // }
 
-    //Ejercicio 3
+
+
+    //Ejercicio 3 Pagina 27
     //Función que calcula abusando recursividad. Recordad que a^b=a*ab-1
+
 
     // public static int potencia(int a,int b){
     //     if (b==0){
@@ -50,6 +57,8 @@ public class actividades5 {
     //     System.out.println(potencia(2,3));
     // }
 
+
+    //Ejercicio 4 Pagina 27
     // Método recursivo para pasar un número decimal, que
     // compruebe que es positivo, y pasarlo a binario mediante
     // sucesivas divisiones por 2

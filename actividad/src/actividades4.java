@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class actividades4 {
- //Crea un procedimiento para calcular el área y volumen
- //de un cilindro (2*PI*(altura+radio), PI*radio2*altura)
+ 
+    //Ejercicio 1 Pagina 24
+    //Crea un procedimiento para calcular el área y volumen
+    //de un cilindro (2*PI*(altura+radio), PI*radio2*altura)
 
 //     final static double PI=3.14159;  
 //     public static void main(String[] args) {
@@ -23,9 +25,13 @@ public class actividades4 {
 //         System.out.println(PI*(radio*radio)*altura);
 //     }
 
+
+        //Ejercicio 2 Pagina 24
         //Crear las funciones esPar, esDivisible3 y un
         //procedimiento para imprimir los números pares divisibles por 3 que
         //hay entre 1 y 20
+
+        
         public static boolean esPar(int numero){
             return numero%2==0;
         }

@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class actividades2{
     public static void main(String[] args) throws Exception {
+    
+    //Ejercicio 1 Pagina 14
+    //Haz el programa JAVA del siguiente diagrama de flujo
+
     // int a=0,b=0,c=0;
     // Scanner teclado=new Scanner(System.in);
 
@@ -35,7 +39,13 @@ public class actividades2{
     // }
 
 
-      //Actividad2
+
+    //Actividad2 Pagina 14
+    //Haz un programa que nos pide una nota y nos indica la calificación
+    //(sobresaliente, notable, bien, aprobado, suspenso, nota incorrecta)
+    //Usa if-else y switch
+
+
     // Scanner teclado2=new Scanner(System.in);
     // System.out.println("Introduce la nota");
     // int nota=teclado2.nextInt();
@@ -61,7 +71,12 @@ public class actividades2{
     //     System.out.println("Nota incorrecta");
     // }
     
-    //Actividad3
+
+    
+    //Actividad3 Pagina 14
+    //Haz un programa que solicite el dia, mes y año y comprueba si es valido.
+    //Para el año hay que ver si el 29 es válido por ser bisiesto. Un año es bisiesto si: (anio % 
+    //4 == 0 && anio % 100 != 0) || (anio % 400 == 0)
 
     int dia=0,mes=0,año=0;
     Scanner teclado=new Scanner(System.in);
