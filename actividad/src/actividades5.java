@@ -71,7 +71,7 @@ public class actividades5 {
         }
     }
     public static void main(String[] args) {
-        System.out.println(binario(4));
+        System.out.println(binario(15));
     }
 }
 
