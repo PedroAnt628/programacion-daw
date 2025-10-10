@@ -174,33 +174,44 @@ public class actividades3 {
     //Actividad 7 Pagina 18
     //Calcular del mcd 
 
-    int a;
-    int b;
-    int resto;
-    Scanner teclado=new Scanner(System.in);
-    System.out.println("Introduce a");
-    a=teclado.nextInt();
-    System.out.println("Introduce b");
-    b=teclado.nextInt();
-    int originalA = a;
-    int originalB = b;
-    while (b!=0){
-        resto =a % b;
-        a=b;  
-        b=resto;
-    }
-    System.out.println("El mcd es: "+a);
+    // int a;
+    // int b;
+    // int resto;
+    // Scanner teclado=new Scanner(System.in);
+    // System.out.println("Introduce a");
+    // a=teclado.nextInt();
+    // System.out.println("Introduce b");
+    // b=teclado.nextInt();
+    // int originalA = a;
+    // int originalB = b;
+    // while (b!=0){
+    //     resto =a % b;
+    //     a=b;  
+    //     b=resto;
+    // }
+    // System.out.println("El mcd es: "+a);
 
-    //Calculo del mcm
-    int mcm=Math.max(originalA,originalB);
-    while (mcm % originalA!=0 || mcm % originalB!=0){
-        mcm+=Math.max(originalA, originalB);
-    }
-        System.out.println("El mcm es: "+mcm);
+    // //Calculo del mcm
+    // int mcm=Math.max(originalA,originalB);
+    // while (mcm % originalA!=0 || mcm % originalB!=0){
+    //     mcm+=Math.max(originalA, originalB);
+    // }
+    //     System.out.println("El mcm es: "+mcm);
 
 
-    teclado.close();
+    // teclado.close();
 
+    //Ejercicio 4
+//Desarrolla el programa que
+//muestra las tablas de multiplicar del 1 al 10
+
+     //Imprimir las tablas de multiplicar del 1 al 10
+     for (int i=1;i<=10;i++)
+        for (int j=1;j<=10;j++) {
+            System.out.println(i+"*"+j + "= " +(i*j));
+        }
+        System.out.println("");
+    
 
 }
 }

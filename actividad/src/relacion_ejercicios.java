@@ -146,32 +146,7 @@ public class relacion_ejercicios {
     // } 
     
 
-//Ejercicio 4
-    public static void main(String[] args) {
 
-    int nota1;
-    int nota2;
-    Scanner teclado=new Scanner(System.in);
-    System.out.println("Introduce la nota del primer examen");
-    nota1=teclado.nextInt();
-    System.out.println("Introduce la nota del segundo examen");
-    nota2=teclado.nextInt();
-    int media=(nota1 + nota2) / 2;
-    if ( media>= 5 ){
-        System.out.println("Estas aprobado con un " + media);
-    } else {
-        System.out.println("Cual ha sido el resultado de la recuperacion");
-        
-        Scanner teclado2=new Scanner(System.in);
-        String recuperacion=teclado2.nextLine();
 
-            if (recuperacion.equals("apto")){
-                System.out.println("Has aprobado la recuperacion");
-            } else {
-                System.out.println("Has suspendido la recuperacion");
-            }
-    }
 
-    }
-    
 }
