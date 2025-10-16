@@ -203,7 +203,7 @@ public class relacion_ejercicios {
     //             System.out.println("| IPE      | LMSGI    | GBD      | PROG     | GBD      |");
     //             System.out.println("| SIST.INF | SIST.INF | GBD      | ENT.DESA | Digitaliz|");
     //             System.out.println("| GBD      | SIST.INF | SIST.INF | ENT.DESA | LMSGI    |");
-    //             System.out.println("| GBD      | PROG     | SIST.INF | IPE      | LMSGI    |");
+    //             System.out.println("| GBd      | PROG     | SIST.INF | IPE      | LMSGI    |");
     //             System.out.println("| PROG     | PROG     | PROG     | GBD      | IPE      |");
     //             System.err.println("| PROG     | ENT.DESA | PROG     | Sosteni  | Sosteni  |");
     //             System.out.println("|----------|----------|----------|----------|----------|");
@@ -226,7 +226,7 @@ public class relacion_ejercicios {
     //     double irpf;
     //     double sueldoNeto;
     //     Scanner teclado=new Scanner(System.in);
-    //     System.out.println("Introduce tu cargo (1 - Prog. junior, 2 - Prog. senior, 3 – Jefe de proyecto)");
+    //     System.out.println("Introduce tu cargo (1 - Prog. junior, 2 - Prog. senior, 3 – JEfe de proyecto)");
     //     cargo=teclado.nextInt();
     //     System.out.println("Introduce los dias que has visitado clientes");
     //     diaViaje=teclado.nextInt();
@@ -264,6 +264,172 @@ public class relacion_ejercicios {
   
     // }
 
+//Ejercicio 7
+    // public static void main(String[] args) {
+    //     Scanner teclado=new Scanner(System.in);
+    //     int numero;
+    //     int contadorPositivos=0;
+    //     int contadorNegativos=0;
+    //     System.err.println("Introucde un numero o 0 para salir");
+    //     numero=teclado.nextInt();
+    //     while (numero!=0){
+    //         if (numero<0){
+    //             System.out.println("El numero es negativo");
+    //             contadorNegativos++;
+    //         } else{
+    //             System.out.println("El numero es positivo");
+    //             contadorPositivos++;
+    //         }
+    //         System.err.println("Introduce un numero o 0 para salir");
+    //         numero=teclado.nextInt();
+    //     }
+    //     System.out.println("Numeros positivos: " + contadorPositivos);
+    //     System.out.println("Numeros negativos: " + contadorNegativos);
+    // }
 
 
+//Ejercicio 8
+    // public static void main(String[] args) {
+    //     int n;
+    //     int fibonacci1=0;
+    //     int fibonacci2=1;
+    //     int fibonacci3;
+    //     int contador=0;
+    //     Scanner teclado = new Scanner(System.in);
+    //     System.out.println("Introduce un numero");
+    //     n = teclado.nextInt();
+    //     if (n > 0) {
+    //         System.out.println(fibonacci1);
+    //     }
+    //     if (n > 1) {
+    //         System.out.println(fibonacci2);
+    //     }
+    //     for (contador = 2; contador < n; contador++) {
+    //         fibonacci3 = fibonacci1 + fibonacci2;
+    //         System.out.println(fibonacci3);
+    //         fibonacci1 = fibonacci2;
+    //         fibonacci2 = fibonacci3;
+    //     }
+    //     teclado.close();
+    // }
+    
+//Ejercicio 9
+    // public static int fibonacci(int n) {
+    //     if (n <= 0) {
+    //         return 0;
+    //     } else if (n == 1) {
+    //         return 1;
+    //     } else {
+    //         return fibonacci(n - 1) + fibonacci(n - 2);
+    //     }
+    // }
+    // public static void main(String[] args) {
+    //     int n;
+    //     Scanner teclado = new Scanner(System.in);
+    //     System.out.println("INtroduce un numero");
+    //     n = teclado.nextInt();
+    //     for (int i = 0; i < n; i++) {
+    //         System.out.println(fibonacci(i));
+    //     }
+    //     teclado.close();
+    // }
+
+
+//Ejercicio 10
+    // public static int contarPar(int n) {
+    //     if (n == 0) {
+    //         return 0;
+    //     } else {
+    //         int digito = n % 10;
+    //         if (digito % 2 == 0) {
+    //             return 1 + contarPar(n / 10);
+    //         } else {
+    //             return contarPar(n / 10);
+    //         }
+    //     }
+    // }
+
+    // public static int contarImpar(int n) {
+    //     if (n == 0) {
+    //         return 0;
+    //     } else {
+    //         int digito = n % 10;
+    //         if (digito % 2 != 0) {
+    //             return 1 + contarImpar(n / 10);
+    //         } else {
+    //             return contarImpar(n / 10);
+    //         }
+    //     }
+    // }
+
+    // public static void main(String[] args) {
+    //     Scanner teclado = new Scanner(System.in);
+    //     System.out.println("INtroduce un numero");
+    //     int numero = teclado.nextInt();
+    //     int pares = contarPar(numero);
+    //     int impares = contarImpar(numero);
+    //     System.out.println("El " + numero + " tiene " + pares + " digitos pares y " + impares + " digitos impares.");
+    //     teclado.close();
+    // }
+
+//Ejercicio 11
+    // public static void main(String[] args) {
+    //     Scanner teclado=new Scanner(System.in);
+    //     int numer1;
+    //     int numero2;
+    //     int operacion;
+    //     do {
+    //     System.out.println("Introduce un numero o -1 para salir");
+    //     numer1=teclado.nextInt();
+    //     if (numer1==-1)break;
+    //     System.out.println("Introduce otro numero");
+    //     numero2=teclado.nextInt();
+    //     System.out.println("Elige una opcion: 1.Sumar 2.Restar 3.Multiplicar 4.Dividir");
+    //     operacion=teclado.nextInt();
+    //     switch (operacion){
+    //         case 1:
+    //             System.out.println("La suma es: "+(numer1+numero2));
+    //             break;
+    //         case 2:
+    //             System.out.println("La resta es: "+(numer1-numero2));
+    //             break;
+    //         case 3:
+    //             System.out.println("La multiplicacion es: "+(numer1*numero2));
+    //             break;
+    //         case 4:
+    //             System.out.println("La division es: "+(numer1/numero2));
+
+    //             break;
+    //         default:
+    //             System.out.println("Opcion no valida");
+    //     }
+    // } while (numer1!=-1);
+    // }
+
+
+//Ejercicio 12
+    // public static void main(String[] args) {
+    //     int a;
+    //     int b;
+    //     int resto;
+    //     Scanner teclado=new Scanner(System.in);
+    //     System.out.println("Introduce a");
+    //     a=teclado.nextInt();
+    //     System.out.println("Introduce b");
+    //     b=teclado.nextInt();
+    //     int originalA = a;
+    //     int originalB = b;
+    //     while (b!=0){
+    //         resto =a % b;
+    //         a=b;  
+    //         b=resto;
+    //     }
+    //     System.out.println("El mcd es: "+a);
+
+    //     int mcm=Math.max(originalA,originalB);
+    //     while (mcm % originalA!=0 || mcm % originalB!=0){
+    //         mcm=mcm+Math.max(originalA, originalB);
+    //     }
+    //         System.out.println("El mcm es: "+mcm);
+    // }
 }
