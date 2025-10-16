@@ -81,77 +81,42 @@ public class App {
         // }
 
 
-
-
-
-
-        //Ejercicios
-
-        //Realiza una función que busca un número en un array e indica dónde está
-        // int[] buscar={1,2,3,4,5,6,7,8,9,10};
-        // Scanner teclado = new Scanner(System.in);
-        // System.out.println("Introduce un numero a buscar");
-        // int num=teclado.nextInt();
-        // for(int i=0;i<buscar.length;i++) {
-        //     if(buscar[i]==num) {
-        //         System.out.println("El numero "+num+" se encuentra en la posicion "+i);
-        //     }
+        //Realizar una copia de un array
+        // int[] vector={1,4,2,6,3};
+        // int[] copiaVector = new int[vector.length];
+        // for (int i=0;i<vector.length;i++){
+        //     copiaVector[i]=vector[i];
         // }
+        // vector[4]=10;
+
+        // //Vector original
+        // for (int i=0;i<vector.length;i++){
+        //     System.out.print(vector[i]+" ");
+        // }
+        // System.out.println();
+
+        // //Copia del vector
+        // for (int i=0;i<copiaVector.length;i++){
+        //     System.out.print(copiaVector[i]+" ");
+        // }
+        // System.out.println();
+
+        //Insertar un elemento mas
+        int[] vectorPrueba={1,2,3};
+        int[] vectorFinal;
+        System.out.println(vectorPrueba.length);
+        //Reservar memoria para 1 elemento mas
+        vectorFinal=new int[vectorPrueba.length+1];
+        for (int i=0;i<vectorPrueba.length;i++){
+            vectorFinal[i]=vectorPrueba[i];
+        }
+        vectorFinal[vectorPrueba.length]=20;
+        for (int i=0;i<vectorFinal.length;i++){
+            System.out.print(vectorFinal[i]+" ");
+        }
+        System.out.println();
+
+
         
-        // //Realiza un programa que muestra tu horario y qué clases tienes hoy
-        // String[][] horario={
-        //     {"Lunes", "Prog", "LM", "BD"},
-        //     {"Martes", "Prog", "Entor", "BD"},
-        //     {"Miercoles", "Prog", "Prog", "Entor"},
-        //     {"Jueves", "Prog", "BD", "BD"},
-        //     {"Viernes", "Prog", "LM", "LM"}
-        // };
-        // System.out.println("Introduce un dia de la semana");
-        // String dia=teclado.next();
-        // for(int i=0;i<horario.length;i++) {
-        //     if(horario[i][0].equalsIgnoreCase(dia)) {
-        //         System.out.print("El "+dia+" tienes: ");
-        //         for(int j=1;j<horario[i].length;j++) {
-        //             System.out.print(horario[i][j]+" ");
-        //         }
-        //     }
-        // }
-
-        //Realiza un programa que inserta valores en una matriz dinámica y devuelva la
-        //suma de los valores de cada fila y columna
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduce el numero de filas");
-        int filas=teclado.nextInt();
-        System.out.println("Introduce el numero de columnas");
-        int columnas=teclado.nextInt();
-
-        int [][] matriz=new int[filas][columnas];
-        for(int i=0;i<filas;i++) {
-            for(int j=0;j<columnas;j++) {
-                System.out.println("Introduce el valor de la posicion "+i+","+j);
-                matriz[i][j]=teclado.nextInt();
-            }
-        }
-        int[] sumaFilas=new int[filas];
-        int[] sumaColumnas=new int[columnas];
-
-        for(int i=0;i<filas;i++) {
-            for(int j=0;j<columnas;j++) {
-                sumaFilas[i]+=matriz[i][j];
-                sumaColumnas[j]+=matriz[i][j];
-            }
-        }
-
-        System.out.println("Suma de filas:");
-        for(int i=0;i<filas;i++) {
-            System.out.println("Fila "+i+": "+sumaFilas[i]);
-        }
-
-        System.out.println("Suma de columnas:");
-        for(int j=0;j<columnas;j++) {
-            System.out.println("Columna "+j+": "+sumaColumnas[j]);
-        }
-
-        teclado.close();
     }
 }
