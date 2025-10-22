@@ -34,6 +34,7 @@ public class App {
         if (turno==true) System.out.println("El jugador 1 ha ganado");
         else System.out.println("El jugador 2 ha ganado");
 
+        teclado.close();
 
     }
     public static void imprimirMatriz(){
@@ -117,5 +118,7 @@ public class App {
             }
         }
         return true;
+
     }
+
 }
