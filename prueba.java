@@ -60,18 +60,61 @@ public class prueba{
         // System.out.println("La edad máxima introducida fue: " + edadmax);
         
 
-        int numero3;
-        System.out.println("Introdude la tabla que quieres multiplicar");
-        Scanner teclado=new Scanner(System.in);
-        numero3=teclado.nextInt();
-        int resultado;
-        for (int i = 1; i <= 10; i++) {
-            resultado = i * numero3;
-            System.out.println(numero3 + " x " + i + " = " + resultado);
+        // int numero3;
+        // System.out.println("Introdude la tabla que quieres multiplicar");
+        // Scanner teclado=new Scanner(System.in);
+        // numero3=teclado.nextInt();
+        // int resultado;
+        // for (int i = 1; i <= 10; i++) {
+        //     resultado = i * numero3;
+        //     System.out.println(numero3 + " x " + i + " = " + resultado);
 
 
             
-        }
+        // }
 
+        // int numero4;
+        // int contador=0;
+        // Scanner teclado=new Scanner(System.in);
+        
+        
+        // do { 
+        //     System.out.println("Introduce un numero o 0 para salir");
+        //     numero4=teclado.nextInt();
+        //     if (numero4 % 2 == 0 && numero4 != 0){
+        //         contador++;
+        //     }
+        // } while (numero4 != 0);
+        //     System.out.println("Hay " + contador +" numeros pares");
+        
+        
+        // int numero5; 
+        // int numeroAle=(int)(Math.random() * (100 - 1 + 1) + 1);
+        // Scanner teclado = new Scanner(System.in);
+        
+
+        // do { 
+        //     System.out.println("Introduce un numero");
+        //     numero5=teclado.nextInt();
+        //     if (numero5 < numeroAle) {
+        //         System.out.println("El numero es mayor");
+        //     }else if (numero5 > numeroAle){
+        //         System.out.println("El numero es menor");
+        //     }
+        // } while (numero5 != numeroAle);
+        // System.out.println("Has acertado, el numero era " + numeroAle);
+
+        int n;
+        System.out.println("Introduce la altura");
+        Scanner teclado = new Scanner(System.in);
+        n = teclado.nextInt();
+
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    
     }
 }
