@@ -102,19 +102,34 @@ public class App {
         // System.out.println();
 
         //Insertar un elemento mas
-        int[] vectorPrueba={1,2,3};
-        int[] vectorFinal;
-        System.out.println(vectorPrueba.length);
-        //Reservar memoria para 1 elemento mas
-        vectorFinal=new int[vectorPrueba.length+1];
-        for (int i=0;i<vectorPrueba.length;i++){
-            vectorFinal[i]=vectorPrueba[i];
+        // int[] vectorPrueba={1,2,3};
+        // int[] vectorFinal;
+        // System.out.println(vectorPrueba.length);
+        // //Reservar memoria para 1 elemento mas
+        // vectorFinal=new int[vectorPrueba.length+1];
+        // for (int i=0;i<vectorPrueba.length;i++){
+        //     vectorFinal[i]=vectorPrueba[i];
+        // }
+        // vectorFinal[vectorPrueba.length]=20;
+        // for (int i=0;i<vectorFinal.length;i++){
+        //     System.out.print(vectorFinal[i]+" ");
+        // }
+        // System.out.println();
+
+
+        int[] notas={1,3,5,7,8,2};
+        int contador=0;
+        for (int i=0;i<notas.length; i++){
+            if (notas[i]==2)contador++;
         }
-        vectorFinal[vectorPrueba.length]=20;
-        for (int i=0;i<vectorFinal.length;i++){
-            System.out.print(vectorFinal[i]+" ");
+        int[] notas2= new int [notas.length-contador];
+        for (int i=0;i<notas2.length; i++){
+            if (notas[i]!=2){
+                notas2[i]=notas[i];
+            }
         }
-        System.out.println();
+        System.out.println(notas2[0]);
+
 
 
         

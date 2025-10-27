@@ -233,9 +233,44 @@ public class prueba{
         //     }
         //     System.out.println();
         // }
+ 
+
+
+        //System.out.println(fibonacci(7)); // imprime 13
 
 
 
+        //Cuenta atrás
         
+        int n=8;
+        for (int i = n; i >= n; i--) {
+            System.out.println(i);
+        
+        }
+
     }
+
+
+
+    //Funcion fibonacci
+    // public static int fibonacci(int n) {
+    //     if (n == 0) {
+    //         return 0; // caso base
+    //      } else if (n == 1) {
+    //         return 1; // caso base
+    //     } else {
+    //         return fibonacci(n - 1) + fibonacci(n - 2); // caso recursivo
+    //     }
+    // }
+
+    //Cuenta atras recursiva
+    // public static void cuentaAtras(int n) {
+    //         if (n < 0) {
+    //             System.out.println("¡Despegue!");
+    //         } else {
+    //             System.out.println(n);
+    //             cuentaAtras(n - 1); // llamada recursiva
+    //         }
+    // }
+
 }
