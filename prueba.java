@@ -235,20 +235,55 @@ public class prueba{
         // }
  
 
-
+        //Funcion fibonacci
         //System.out.println(fibonacci(7)); // imprime 13
 
 
 
         //Cuenta atrás
-        
-        int n=8;
-        for (int i = n; i >= n; i--) {
-            System.out.println(i);
-        
-        }
+        // int n=8;
+        // for (int i = n; i >= n; i--) {
+        //     System.out.println(i);
+        // }
 
+
+
+        //Calculadora
+        // int numero1;
+        // int numero2;
+        // int cuenta;
+
+        // do {
+        //     System.out.println("Que operacion quieres hacer: 1-Sumar, 2-Retar, 3-Multiplicar, 4-Dividir o -1 para salir");
+        //     Scanner teclado = new Scanner(System.in);
+        //     cuenta = teclado.nextInt();
+        //     if (cuenta==-1) break;
+        //     System.out.println("Cuales son los numeros");
+        //     numero1 = teclado.nextInt();
+        //     numero2 = teclado.nextInt();
+        //     switch (cuenta) {
+        //         case 1:
+        //             System.out.println(numero1 + numero2);
+        //             break;
+        //         case 2:
+        //             System.out.println(numero1 - numero2);
+        //             break;
+        //         case 3:
+        //             System.out.println(numero1 * numero2);
+        //             break;
+        //         case 4:
+        //             System.out.println(numero1 / numero2);
+        //             break;
+        //         default:
+        //             System.out.println("Operacion no valida");
+                
+        //     }
+        // } while (cuenta!=-1);
+
+
+        
     }
+    
 
 
 

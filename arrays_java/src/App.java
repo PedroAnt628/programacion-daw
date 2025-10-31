@@ -117,20 +117,19 @@ public class App {
         // System.out.println();
 
 
-        int[] notas={1,3,5,7,8,2};
+        int[] notas={2,3,5,7,8,2};
         int contador=0;
         for (int i=0;i<notas.length; i++){
             if (notas[i]==2)contador++;
         }
-        int[] notas2= new int [notas.length-contador];
-        for (int i=0;i<notas2.length; i++){
-            if (notas[i]!=2){
-                notas2[i]=notas[i];
+        int[] notas2= new int [notas.length-contador];  // Creamos el array nuevo con el tamaño correcto
+        int j=0;                                          // Variable j para controlar la posición en notas2
+        for (int i=0;i<notas.length; i++){               // Recorremos el array original completo
+            if (notas[i]!=2){                            // Si el número no es 2
+                notas2[j++]=notas[i];                    // Copiamos al nuevo array y aumentamos j
             }
         }
         System.out.println(notas2[0]);
-
-
 
         
     }
