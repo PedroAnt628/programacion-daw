@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.HashSet;
 import java.util.Set;
 
-public class App {
+public class Ahorcado {
     public static void main(String[] args) throws Exception {
         // Array con (por ejemplo) 5 palabras posibles
         String[] palabras = {"programacion", "java", "ordenador", "tarea", "ventana"};
