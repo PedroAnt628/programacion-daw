@@ -2,7 +2,7 @@
 import java.time.LocalTime;
 import java.util.Scanner;
 
-public class relacion_ejercicios {
+public class relacion_ejercicios_tema2 {
 //Ejercicio 1
     // public static void main(String[] args) {
     //     LocalTime clock = LocalTime.now();
