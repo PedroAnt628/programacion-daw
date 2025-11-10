@@ -1,5 +1,5 @@
 
-public class actividades {
+public class actividades_tema2 {
 
     //Ejercicio 1 Pagina 9
     //Realiza un programa que genera 2 números y nos diga el cociente, la

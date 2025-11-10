@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import javax.print.attribute.standard.Media;
 
-public class actividades3 {
+public class actividades3_tema2 {
     public static void main(String[] args) {
 
 

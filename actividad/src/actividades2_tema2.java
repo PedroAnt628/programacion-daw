@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class actividades2{
+public class actividades2_tema2{
     public static void main(String[] args) throws Exception {
     
     //Ejercicio 1 Pagina 14

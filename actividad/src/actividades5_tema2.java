@@ -1,4 +1,4 @@
-public class actividades5 {
+public class actividades5_tema2 {
     //Ejercicio 1 Pagina 27
     //Función que devuelve la cantidad de dígitos de un númeropositivo
 

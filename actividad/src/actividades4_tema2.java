@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class actividades4 {
+public class actividades4_tema2 {
  
     //Ejercicio 1 Pagina 24
     //Crea un procedimiento para calcular el área y volumen
