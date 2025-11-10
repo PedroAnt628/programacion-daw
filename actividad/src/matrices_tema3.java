@@ -1,17 +1,8 @@
 import java.util.Scanner;
 
 public class matrices_tema3 {
-    public static void imprimeMatriz(int[][]matriz) {
-        for(int i=0;i<matriz.length;i++) {
-            for(int j=0;j<matriz[i].length;j++) {
-                System.out.print(matriz[i][j]+" ");
-            }
-            System.out.println();
-        }
-    }
     public static void main(String[] args) {
        //Ejercicios
-
         //Ejercicio 1
         //Realiza una función que busca un número en un array e indica dónde está
         // int[] buscar={1,2,3,4,5,6,7,8,9,10};
@@ -24,6 +15,9 @@ public class matrices_tema3 {
         //     }
         // }
         
+
+
+
         //Ejercicio 2
         // //Realiza un programa que muestra tu horario y qué clases tienes hoy
         // String[][] horario={
@@ -44,56 +38,107 @@ public class matrices_tema3 {
         //     }
         // }
 
+
+
+
         //Ejercicio 3
         //Realiza un programa que inserta valores en una matriz dinámica y devuelva la
         //suma de los valores de cada fila y columna
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduce el numero de filas");
-        int filas=teclado.nextInt();
-        System.out.println("Introduce el numero de columnas");
-        int columnas=teclado.nextInt();
+        // Scanner teclado = new Scanner(System.in);
+        // System.out.println("Introduce el numero de filas");
+        // int filas=teclado.nextInt();
+        // System.out.println("Introduce el numero de columnas");
+        // int columnas=teclado.nextInt();
 
-        int [][] matriz=new int[filas][columnas];
+        // int [][] matriz=new int[filas][columnas];
         
-        for(int i=0;i<filas;i++) {
-            for(int j=0;j<columnas;j++) {
-                matriz[i][j]=(int)(Math.random()*(100)+1);
+        // for(int i=0;i<filas;i++) {
+        //     for(int j=0;j<columnas;j++) {
+        //         matriz[i][j]=(int)(Math.random()*(100)+1);
+        //     }
+        // }
+        // imprimeMatriz(matriz);
+        // System.out.println();
+
+        // int[] resultadoFila=new int[filas];
+        // int[] resultadoColumna=new int[columnas];
+
+        // //Recorrer por filas
+        // for (int i=0;i<filas;i++){
+        //     int total=0;
+        //     for (int j=0;j<columnas;j++){
+        //         total=total+matriz[i][j];
+        //     }
+        //     resultadoFila[i]=total;
+        // }
+        // //Mostrar las sumas
+        // System.out.println("Sumar las filas");
+        // for (int i=0;i<filas;i++){
+        //     System.out.println(resultadoFila[i]);
+        // }
+
+        // //Recorrer columnas
+        // for (int j=0;j<columnas;j++){
+        //     int total=0;
+        //     for(int i=0;i<filas;i++){
+        //         total=total+matriz[i][j];
+        //     }
+        //     resultadoColumna[j]=total;
+        // }
+        // //Mostrar las sumas
+        // System.out.println("Sumar las columnas");
+        // for (int i=0;i<columnas;i++){
+        //     System.out.println(resultadoColumna[i]);
+        // }
+
+        // teclado.close();
+
+
+
+
+        //Ejercicio 4
+        // Crea una función que borra un valor en el array. Ej: Quitar 2 → {3,5,7,8}
+        int[] notas={2,3,5,7,8,2};
+        int contador=0;
+        for (int i=0;i<notas.length; i++){
+            if (notas[i]==2)contador++;
+        }
+        int[] notas2= new int [notas.length-contador];   //Array nuevo con el tamaño correcto
+        int j=0;                                         
+        for (int i=0;i<notas.length; i++){               //Recorremos el array original completo
+            if (notas[i]!=2){                            //Si el número no es 2
+                notas2[j++]=notas[i];                    //Copiamos al nuevo array y aumentamos j
             }
         }
-        imprimeMatriz(matriz);
-        System.out.println();
-
-        int[] resultadoFila=new int[filas];
-        int[] resultadoColumna=new int[columnas];
-
-        //Recorrer por filas
-        for (int i=0;i<filas;i++){
-            int total=0;
-            for (int j=0;j<columnas;j++){
-                total=total+matriz[i][j];
-            }
-            resultadoFila[i]=total;
-        }
-        //Mostrar las sumas
-        System.out.println("Sumar las filas");
-        for (int i=0;i<filas;i++){
-            System.out.println(resultadoFila[i]);
-        }
-
-        //Recorrer columnas
-        for (int j=0;j<columnas;j++){
-            int total=0;
-            for(int i=0;i<filas;i++){
-                total=total+matriz[i][j];
-            }
-            resultadoColumna[j]=total;
-        }
-        //Mostrar las sumas
-        System.out.println("Sumar las columnas");
-        for (int i=0;i<columnas;i++){
-            System.out.println(resultadoColumna[i]);
-        }
-
-        teclado.close();
+        System.out.println(notas2[0]);
     }
+
+
+
+
+    //Ejercicio 5
+    //Crea una función que inserta un nuevo entero en la posición que le digas de
+    //parámetro. Si le indicas un parámetro mayor al tamaño actual, rellenará con 0
+    public static int[] insertarValor(int[] original, int valor, int posicion) {
+        int nuevoTamaño = Math.max(original.length, posicion + 1);
+        int[] resultado = new int[nuevoTamaño];
+
+        // Copiar los valores originales
+        for (int i = 0; i < original.length; i++) {
+            resultado[i] = original[i];
+        }
+
+        // Si la posición está dentro del array original, desplazamos los elementos
+        if (posicion < original.length) {
+            for (int i = nuevoTamaño - 1; i > posicion; i--) {
+                resultado[i] = resultado[i - 1];
+            }
+        }
+
+        // Insertar el nuevo valor
+        resultado[posicion] = valor;
+
+        return resultado;
+    }
+    
 }
