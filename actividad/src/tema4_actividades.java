@@ -38,8 +38,9 @@ class Persona {
         p.obtenerEdad();
         System.out.println("Tienes "+p.hijos+" hijos");
         Persona p2=new Persona("12345678B","01/07/1987");
-        p.hijos=3;
         System.out.println("Tienes "+p2.hijos+" hijos");
+        p.hijos=3;
+
         }
 
 }
