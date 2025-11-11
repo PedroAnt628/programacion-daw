@@ -99,6 +99,12 @@ public class matrices_tema3 {
         //Ejercicio 4
         // Crea una función que borra un valor en el array. Ej: Quitar 2 → {3,5,7,8}
         int[] notas={2,3,5,7,8,2};
+        System.out.println("Array original:");
+        for (int i=0; i<notas.length; i++) {
+            System.out.print(notas[i] + " ");
+        }
+        System.out.println();  // Salto de línea
+
         int contador=0;
         for (int i=0;i<notas.length; i++){
             if (notas[i]==2)contador++;
@@ -110,7 +116,12 @@ public class matrices_tema3 {
                 notas2[j++]=notas[i];                    //Copiamos al nuevo array y aumentamos j
             }
         }
-        System.out.println(notas2[0]);
+        
+        System.out.println("Array sin los numeros 2:");
+        for (int i=0; i<notas2.length; i++) {
+            System.out.print(notas2[i] + " ");
+        }
+        System.out.println();  // Salto de línea
     }
 
 
