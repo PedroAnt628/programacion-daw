@@ -28,7 +28,7 @@ public class persona {
         return this.edad;
     } 
 
-    public void imprimirDatos(){
+    public void imprimirPersona(){
         System.out.println("Me llamo "+this.nombre+" y tengo "+this.edad);
     }   
 }
