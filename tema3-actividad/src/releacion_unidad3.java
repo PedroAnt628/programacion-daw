@@ -262,7 +262,7 @@ public class releacion_unidad3 {
         }
     }
 
-    public static double[][] calcularColumnas(int[][] matriz1, int[][] matriz2) {
+        public static double[][] calcularColumnas(int[][] matriz1, int[][] matriz2) {
         //Numero de filas
         int filas = matriz1.length;
         //Numero de columnas en la primera fila

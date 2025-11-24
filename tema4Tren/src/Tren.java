@@ -1,9 +1,13 @@
 public class Tren {
     private Locomotora locomotora = null;
-    private Vagon vagon = null;
+    private Vagon[]vagon = null;
     private Maquinistas maquinistas = null;
 
-    public Tren(Locomotora locomotora, Vagon vagon, Maquinistas maquinistas) {
+    public Tren(){
+
+    }
+
+    public Tren(Locomotora locomotora, Vagon[] vagon, Maquinistas maquinistas) {
         this.locomotora = locomotora;
         this.vagon = vagon;
         this.maquinistas = maquinistas;
@@ -17,11 +21,11 @@ public class Tren {
         this.locomotora = locomotora;
     }
 
-    public Vagon getVagon() {
+    public Vagon[] getVagon() {
         return vagon;
     }
 
-    public void setVagon(Vagon vagon) {
+    public void setVagon(Vagon[] vagon) {
         this.vagon = vagon;
     }
 

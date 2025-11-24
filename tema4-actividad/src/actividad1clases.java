@@ -4,7 +4,6 @@ import prueba.matematicas;
 public class actividad1clases {
     public static void main(String[] args) {
         persona p=new persona("Pedro", 19);
-        p.imprimirDatos();
 
     
         double a=5;

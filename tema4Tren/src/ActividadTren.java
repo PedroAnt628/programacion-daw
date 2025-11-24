@@ -8,20 +8,32 @@ public class ActividadTren {
         Maquinistas maquinista1 = new Maquinistas("Francisco", "34534643d", "15€", "Lo mas bajo");
         Maquinistas maquinista2 = new Maquinistas("Jesus", "34534643d", "1445€", "Lo mas alto");
 
-        Vagon vagon1 = new Vagon(1, 40, 15, "Arroz");
-        Vagon vagon2 = new Vagon(2, 100, 35, "Canabis");
-        Vagon vagon3 = new Vagon(3, 200, 12, "Adrianes");
-        Vagon vagon4 = new Vagon(4, 200, 12, "Jamos");
-
-
         Locomotora locomotora1 = new Locomotora("3453sdf", "2000", "30/12/2008", mecanico2);
         Locomotora locomotora2 = new Locomotora("4568sdf", "1700", "07/07/2015", mecanico1);
-        Locomotora locomotora3 = new Locomotora("4568sdf", "2200", "12/08/2015", mecanico1);
 
-        Tren tren1 = new Tren(locomotora3, vagon4, maquinista2);
+        Vagon[] vagon1= new Vagon[3];
+
+        for ( int i = 0; i < vagon1.length; i++){
+            vagon1[i] = new Vagon(5, 1000, 600, "Tierra");
+
+        }
+
+        Tren tren1 = new Tren();
+        tren1.setLocomotora(locomotora2);
+        tren1.setVagon(vagon1);
+        tren1.setMaquinistas(maquinista2);
+
+         Tren tren2 = new Tren();
+        tren1.setLocomotora(locomotora1);
+        tren1.setVagon(vagon1);
+        tren1.setMaquinistas(maquinista1);
+
+         Tren tren3 = new Tren();
+        tren1.setLocomotora(locomotora2);
+        tren1.setVagon(vagon1);
+        tren1.setMaquinistas(maquinista1);
 
         System.out.println(tren1);
-
 
     }
 }
