@@ -188,51 +188,52 @@ public class pruebaTema3Relacion {
 
 
     //Funcion que devuelve suma, producto y media
-    public static void main(String[] args) {
-        int[][] matriz1 = {
-            {2,5,7},
-            {3,4,1}
-        };
-        int[][] matriz2 = {
-            {4,8,1},
-            {2,7,3}
-        };
+    // public static void main(String[] args) {
+    //     int[][] matriz1 = {
+    //         {2,5,7},
+    //         {3,4,1}
+    //     };
+    //     int[][] matriz2 = {
+    //         {4,8,1},
+    //         {2,7,3}
+    //     };
 
-        double[][] resultado = calculos(matriz1, matriz2);
+    //     double[][] resultado = calculos(matriz1, matriz2);
 
-        for (int i = 0; i < resultado[0].length; i++) {
-            System.out.println("Columna " + (i + 1) + " | Suma: " + (int)resultado[0][i] + " | Producto: " + (int)resultado[1][i] + " | Media: " + String.format("%.2f", resultado[2][i]));
-        }
+    //     for (int i = 0; i < resultado[0].length; i++) {
+    //         System.out.println("Columna " + (i + 1) + " | Suma: " + (int)resultado[0][i] + " | Producto: " + (int)resultado[1][i] + " | Media: " + String.format("%.2f", resultado[2][i]));
+    //     }
 
       
  
-    }
-    public static double[][] calculos( int[][] matriz1, int[][] matriz2){
-        int filas = matriz1.length;
-        int columnas = matriz1[0].length;
+    // }
+    // public static double[][] calculos( int[][] matriz1, int[][] matriz2){
+    //     int filas = matriz1.length;
+    //     int columnas = matriz1[0].length;
 
-        double[][] salida = new double[3][columnas];
+    //     double[][] salida = new double[3][columnas];
 
-        for (int j = 0; j < columnas; j++) {
-            int suma = 0;
-            int producto = 1;
-            for (int i = 0; i < filas; i++) {
-                suma = suma + matriz1[i][j];
-                producto = producto * matriz1[i][j];    
-            }
-            for (int i = 0; i < filas; i++) {
-                suma = suma + matriz2[i][j];
-                producto = producto * matriz2[i][j];       
-            }
-            salida[0][j] = suma;
-            salida[1][j] = producto;
-            salida[2][j] = suma / (filas * 2);
-        }
-        return salida;
-    } 
+    //     for (int j = 0; j < columnas; j++) {
+    //         int suma = 0;
+    //         int producto = 1;
+    //         for (int i = 0; i < filas; i++) {
+    //             suma = suma + matriz1[i][j];
+    //             producto = producto * matriz1[i][j];    
+    //         }
+    //         for (int i = 0; i < filas; i++) {
+    //             suma = suma + matriz2[i][j];
+    //             producto = producto * matriz2[i][j];       
+    //         }
+    //         salida[0][j] = suma;
+    //         salida[1][j] = producto;
+    //         salida[2][j] = suma / (filas * 2);
+    //     }
+    //     return salida;
+    // } 
 
     
 
+    
 
 
 }
