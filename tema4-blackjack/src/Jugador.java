@@ -6,9 +6,9 @@ public class Jugador {
     private int fondos;
     private int victorias;
 
-    public Jugador(String nombre, int fondos) {
+    public Jugador(String nombre) {
         this.nombre = nombre;
-        this.fondos = fondos;
+        this.fondos = 100;
         this.mano = new ArrayList<>();
         this.victorias = 0;
     }
@@ -72,7 +72,9 @@ public class Jugador {
     }
 
     public String mostrarMano() {
+
     String resultado = "";
+
     for (int i = 0; i < mano.size(); i++) {
         resultado += mano.get(i).toString() + " ";
     }

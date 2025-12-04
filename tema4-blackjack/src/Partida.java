@@ -8,8 +8,8 @@ public class Partida {
     
     public Partida(String nombreJugador) {
         baraja = new Baraja();
-        jugador = new Jugador(nombreJugador, 100);
-        crupier = new Jugador("Crupier", 0);
+        jugador = new Jugador(nombreJugador);
+        crupier = new Jugador("Crupier");
     }
 
     //La funcion principal para el blackjack
