@@ -1,4 +1,6 @@
- 
+// Hemos recibido el encargo de un cliente para definir las clases necesarias
+// (atributos, constructores y get/set) para gestionar una empresa ferroviaria, en la que se
+// distinguen dos grandes grupos: el personal y la maquinaria.
 public class ActividadTren {
     public static void main(String[] args) throws Exception {
 

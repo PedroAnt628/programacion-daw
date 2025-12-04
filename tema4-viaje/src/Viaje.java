@@ -1,3 +1,6 @@
+// Crea las clases en JAVA con sus correspondientes
+// constructores y funciones necesarias para mostrar información y
+// modificar los atributos del siguiente diagrama E-R
 public class Viaje {
     public static void main(String[] args) throws Exception {
         Hotel notel1 = new Hotel(1, "Hokkaido", 345345345, 45, "Albox", "avenida");
