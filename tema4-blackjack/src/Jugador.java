@@ -63,7 +63,11 @@ public class Jugador {
     }
 
     public String mostrarMano() {
-        return mano.toString();
+    String resultado = "";
+    for (int i = 0; i < mano.size(); i++) {
+        resultado += mano.get(i).toString() + " ";
+    }
+    return resultado;
     }
 
     

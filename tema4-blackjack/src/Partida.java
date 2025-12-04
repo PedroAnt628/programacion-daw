@@ -4,16 +4,17 @@ public class Partida {
     private Baraja baraja;
     private Jugador jugador;
     private Jugador crupier;
-    private Scanner teclado;
 
+    
     public Partida(String nombreJugador) {
         baraja = new Baraja();
         jugador = new Jugador(nombreJugador, 100);
         crupier = new Jugador("Crupier", 0);
-        teclado = new Scanner(System.in);
     }
 
     public void jugar() {
+        Scanner teclado = new Scanner(System.in);
+
         while (jugador.getFondos() > 0) {
             System.out.println("\nTienes " + jugador.getFondos() + " euros de fondos");
             System.out.print("Introduce tu apuesta: ");
@@ -36,9 +37,8 @@ public class Partida {
             System.out.println("Tu mano: " + jugador.mostrarMano() + " (puntos: " + jugador.calcularPuntos() + ")");
             System.out.println("Crupier muestra: " + crupier.mostrarMano().split(",")[0]);
 
-            // Turno del jugador
             while (jugador.calcularPuntos() < 21) {
-                System.out.print("¿Quieres otra carta? (s/n): ");
+                System.out.print("Quieres otra carta? (s/n): ");
                 String opcion = teclado.next();
                 if (opcion.equalsIgnoreCase("s")) {
                     jugador.recibirCarta(baraja.repartirCarta());
