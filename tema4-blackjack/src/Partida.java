@@ -12,6 +12,7 @@ public class Partida {
         crupier = new Jugador("Crupier", 0);
     }
 
+    //La funcion principal para el blackjack
     public void jugar() {
         Scanner teclado = new Scanner(System.in);
 
@@ -25,6 +26,7 @@ public class Partida {
                 continue;
             }
 
+            //se reparten las cartas
             jugador.limpiarMano();
             crupier.limpiarMano();
             baraja = new Baraja(); 
@@ -35,8 +37,9 @@ public class Partida {
             crupier.recibirCarta(baraja.repartirCarta());
 
             System.out.println("Tu mano: " + jugador.mostrarMano() + " (puntos: " + jugador.calcularPuntos() + ")");
-            System.out.println("Crupier muestra: " + crupier.mostrarMano().split(",")[0]);
+            System.out.println("Crupier muestra: " + crupier.getMano().get(0));
 
+            //Turno del jugador
             while (jugador.calcularPuntos() < 21) {
                 System.out.print("Quieres otra carta? (s/n): ");
                 String opcion = teclado.next();
@@ -48,6 +51,7 @@ public class Partida {
                 }
             }
 
+            //Turno del crupier
             while (crupier.calcularPuntos() < 17) {
                 crupier.recibirCarta(baraja.repartirCarta());
             }
@@ -59,7 +63,7 @@ public class Partida {
             int puntosCrupier = crupier.calcularPuntos();
 
             if (puntosJugador > 21) {
-                System.out.println("Te has pasado de 21. Pierdes");
+                System.out.println("Te has pasado de 21. El crupier gana");
                 jugador.setFondos(jugador.getFondos() - apuesta);
             } else if (puntosCrupier > 21 || puntosJugador > puntosCrupier) {
                 System.out.println("Has ganado");
@@ -67,9 +71,6 @@ public class Partida {
                 jugador.sumarVictoria();
             } else if (puntosJugador == puntosCrupier) {
                 System.out.println("Empate. Se devuelve la apuesta");
-            } else {
-                System.out.println("El crupier gana");
-                jugador.setFondos(jugador.getFondos() - apuesta);
             }
         }
 
