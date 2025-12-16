@@ -23,7 +23,7 @@ public class Partida {
 
             if (apuesta > jugador.getFondos()) {
                 System.out.println("No tienes suficiente dinero");
-                continue;
+                return;
             }
 
             //se reparten las cartas
@@ -62,7 +62,7 @@ public class Partida {
             int puntosJugador = jugador.calcularPuntos();
             int puntosCrupier = crupier.calcularPuntos();
 
-            if (puntosJugador > 21) {
+            if (puntosJugador > 21 || puntosJugador<puntosCrupier) {
                 System.out.println("Te has pasado de 21. El crupier gana");
                 jugador.setFondos(jugador.getFondos() - apuesta);
             } else if (puntosCrupier > 21 || puntosJugador > puntosCrupier) {
