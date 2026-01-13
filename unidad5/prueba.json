@@ -1,0 +1,11 @@
+{
+ "firstName": "Pedro",
+ "lastName": "Moreno Carrillo",
+ "age": 40,
+ "phoneNumbers": [
+ {
+ "type": "home",
+ "phone-number": "666123456"
+ }
+ ]
+}
