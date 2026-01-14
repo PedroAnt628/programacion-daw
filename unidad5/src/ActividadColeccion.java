@@ -34,7 +34,7 @@ public class ActividadColeccion {
 
         // Mostrar resultados
         for (String marca : contador.keySet()) {
-            System.out.println(marca + " → " + contador.get(marca));
+            System.out.println(marca + " -> " + contador.get(marca));
         }
     }
 }
