@@ -15,5 +15,8 @@ public abstract class figura {
         return nombre;
     }
 
-
+    @Override
+    public String toString() {
+        return getNombre() + " | Área: " + area() + " | Perímetro: " + perimetro();
+    }
 }
