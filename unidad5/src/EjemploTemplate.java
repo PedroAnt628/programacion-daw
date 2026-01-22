@@ -34,7 +34,7 @@ public class EjemploTemplate {
         }
         System.out.println();
     }
-    // ⭐ MÉTODO GENÉRICO (TEMPLATE)
+    //MÉTODO GENÉRICO (TEMPLATE)
     public static <T> void imprimirArray(T[] array) {
         for (T elemento : array) {
             System.out.print(elemento + " ");

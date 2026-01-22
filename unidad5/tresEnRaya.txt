@@ -1,2 +1,2 @@
-jugador1=4
+jugador1=6
 jugador2=3

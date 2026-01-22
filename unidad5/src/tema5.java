@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Scanner;
 
 public class tema5 {
     public static void main(String[] args) throws FileNotFoundException {
@@ -12,28 +13,33 @@ public class tema5 {
         // Usa Scanner donde la entrada es fichero y
         // en while usa scanner.hasNextInt()
 
-        // try {
-        //     File archivo = new File("numeros.txt");
-        //     double suma = 0;
-        //     int contador = 0;
+        try {
+            File archivo = new File("numeros.txt");
+            double suma = 0;
+            int contador = 0;
 
-        //     Scanner fichero = new Scanner(archivo);
+            Scanner fichero = new Scanner(archivo);
 
-        //     while (fichero.hasNextInt()) {
-        //         int numero = fichero.nextInt();
-        //         System.out.println(numero);
-        //         suma += numero;
-        //         contador++;
-        //     }
+            while (fichero.hasNextInt()) {
+                int numero = fichero.nextInt();
+                System.out.println(numero);
+                suma += numero;
+                contador++;
+            }
 
-        //     double media = suma / contador;
-        //     System.out.println("Hay " + contador + " números, la suma es " + suma + " y la media es " + media);
+            double media = suma / contador;
+            System.out.println("Hay " + contador + " números, la suma es " + suma + " y la media es " + media);
 
-        //     fichero.close();
-        // } catch (Exception e) {
-        //     System.out.println("Error: " + e.getMessage());
-        // }
+            fichero.close();
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+     }
+}
 
+class actividad2 {
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println(new File(".").getAbsolutePath());
 
         // Actividad 2: Haz el mismo ejercicio anterior
         // pero ahora las líneas van una tras otro
@@ -64,6 +70,6 @@ public class tema5 {
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-    }
+     }
 }
 

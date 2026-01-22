@@ -1,0 +1,4 @@
+#Estadísticas de Raya
+#Thu Jan 22 09:34:51 CET 2026
+jugador1=1
+jugador2=0

@@ -4,11 +4,7 @@ import java.util.List;
 
 public class PilaGenerica<T> {
     // Usamos List como estructura de almacenamiento interna
-    private List<T> elementos;
-
-    public PilaGenerica() {
-        this.elementos = new ArrayList<>();
-    }
+    private List<T> elementos = new ArrayList<>();
 
     // OPERACIÓN: Insertar (Push)
     public void insertar(T objeto) {
