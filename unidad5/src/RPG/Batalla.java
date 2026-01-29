@@ -7,25 +7,20 @@ public class Batalla {
     public static void main(String[] args) {
         Random rand = new Random();
 
-        // Crear equipos
         ArrayList<personajes> equipo1 = new ArrayList<>();
         ArrayList<personajes> equipo2 = new ArrayList<>();
 
-        // Equipo 1
         equipo1.add(new caballero("Caballero1", 100));
         equipo1.add(new mago("Mago1", 80));
         equipo1.add(new mago("Mago2", 120));
 
-        // Equipo 2
         equipo2.add(new orco("Orco1", 100));
         equipo2.add(new orco("Orco2", 80));
         equipo2.add(new orco("Orco3", 120));
-        // Batalla
         int turno = 1;
         while (!equipo1.isEmpty() && !equipo2.isEmpty()) {
             System.out.println("Turno " + turno + ":");
 
-            // Equipo 1 ataca a equipo 2
             if (!equipo1.isEmpty() && !equipo2.isEmpty()) {
                 personajes atacante = equipo1.get(rand.nextInt(equipo1.size()));
                 personajes defensor = equipo2.get(rand.nextInt(equipo2.size()));
@@ -40,7 +35,6 @@ public class Batalla {
                 }
             }
 
-            // Equipo 2 ataca a equipo 1
             if (!equipo1.isEmpty() && !equipo2.isEmpty()) {
                 personajes atacante = equipo2.get(rand.nextInt(equipo2.size()));
                 personajes defensor = equipo1.get(rand.nextInt(equipo1.size()));
@@ -58,7 +52,6 @@ public class Batalla {
             turno++;
         }
 
-        // Determinar ganador
         if (equipo1.isEmpty() && equipo2.isEmpty()) {
             System.out.println("Empate!");
         } else if (equipo1.isEmpty()) {

@@ -10,7 +10,6 @@ import org.json.simple.parser.JSONParser;
 public class actividadesPag26 {
     public static void main(String[] args) {
         try{
-        // Lectura del contenido del fichero JSON
         Object ob = new JSONParser().parse(new FileReader("./unidad5/heroes.json"));
         // Convertir objeto a JSON y procesarlo
         JSONArray listaHeroes = (JSONArray) ob;

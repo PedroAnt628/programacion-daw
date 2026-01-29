@@ -8,7 +8,6 @@ import java.util.Map;
 public class actividadesPag32 {
     public static void main(String[] args) {
 
-        // Lista de marcas
         List<String> marcas = new ArrayList<>();
         marcas.add("Citroën");
         marcas.add("Seat");
@@ -17,18 +16,14 @@ public class actividadesPag32 {
         marcas.add("BMW");
         marcas.add("Seat");
 
-        // Map para contar apariciones
         Map<String, Integer> contador = new HashMap<>();
 
-        // Recorremos la lista
         for (String marca : marcas) {
 
             if (contador.containsKey(marca)) {
-                // Si ya existe, incrementamos
                 int valorActual = contador.get(marca);
                 contador.put(marca, valorActual + 1);
             } else {
-                // Si no existe, lo añadimos con valor 1
                 contador.put(marca, 1);
             }
         }

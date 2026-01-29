@@ -1,14 +1,12 @@
 package Actividades;
 
 public class actividadesPag28 {
-    // Actividad 1: intercambiar dos posiciones en un array
     public static <T> void intercambiar(T[] array, int pos1, int pos2) {
         T temp = array[pos1];
         array[pos1] = array[pos2];
         array[pos2] = temp;
     }
 
-    // Actividad 2: buscar un elemento en el array
     public static <T> int buscar(T[] array, T elemento) {
         for (int i = 0; i < array.length; i++) {
             if (array[i].equals(elemento)) {
@@ -18,7 +16,6 @@ public class actividadesPag28 {
         return -1; 
     }
 
-    // Actividad 3: devolver el máximo de dos valores
     public static <T extends Comparable<T>> T maximo(T a, T b) {
         if (a.compareTo(b) >= 0) {
             return a;
