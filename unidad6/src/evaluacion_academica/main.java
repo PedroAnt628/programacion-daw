@@ -20,11 +20,16 @@ public class main {
         // hace.insertar(1, 2, 6);
         // hace.insertar(2, 3, 7);
 
+        // diseñaPractica.insertar(1, 01, "2016-06-16");
+        // diseñaPractica.insertar(1, 02, "2017-07-16");
+
+
         //alumno.listar();
         //profesor.listar();
         //examenTeorico.listar();
         //practica.listar();
         //realiza.listar();
-        hace.listar();
+        //hace.listar();
+        diseñaPractica.listar();
     }
 }
