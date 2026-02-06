@@ -1,8 +1,8 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "unidad5/json-simple-1.1.1.jar",
         "unidad6/src/mysql-connector-j-9.5.0.jar",
-        "unidad6/mysql-connector-j-9.5.0.jar"
+        "unidad6/mysql-connector-j-9.5.0.jar",
+        "unidad5/json-simple-1.1.1.jar"
     ]
 }

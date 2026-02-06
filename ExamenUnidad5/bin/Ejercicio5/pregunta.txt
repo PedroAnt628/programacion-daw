@@ -1,0 +1,3 @@
+En caso de una clase abstracta nos interesa usarla cuando sepas que sus hijos van a usar un metodo pero 
+cada uno lo implementara de una forma o valores diferentes que se definiran a la hora de usarlo 
+En caso de la interfaz todas las clases que hagan uso de ella, mostraran lo que se haya definido anteriormente

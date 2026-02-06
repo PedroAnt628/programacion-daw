@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import conexiones.Conexion;
+
 public class pag18 {
     public static void main(String[] args) {
         actualizarJugador(666, "Spain");
