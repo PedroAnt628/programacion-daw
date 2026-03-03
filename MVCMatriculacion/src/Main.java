@@ -1,0 +1,7 @@
+import Controlador.ControladorGeneral;
+
+public class Main {
+    public static void main(String[] args) {
+        new ControladorGeneral().iniciar();
+    }
+}
