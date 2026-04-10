@@ -1,6 +1,7 @@
 package Vista;
 
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -9,6 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+
 
 public class ProveedorVista extends JPanel {
 
@@ -26,8 +28,7 @@ public class ProveedorVista extends JPanel {
 
     // Tabla
     public DefaultTableModel modeloTabla = new DefaultTableModel(
-        new Object[]{"Código", "Dirección", "Ciudad", "Provincia"}, 0
-    );
+        new Object[]{"Código", "Dirección", "Ciudad", "Provincia"}, 0);
 
     public JTable tabla = new JTable(modeloTabla);
 
@@ -35,7 +36,7 @@ public class ProveedorVista extends JPanel {
         setLayout(new BorderLayout());
 
         // Panel superior (formulario)
-        JPanel panelFormulario = new JPanel();
+        JPanel panelFormulario = new JPanel(new GridLayout(2, 1));
         panelFormulario.setBorder(BorderFactory.createTitledBorder("Datos Proveedor"));
 
         panelFormulario.add(new JLabel("Código:"));

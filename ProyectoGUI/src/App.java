@@ -1,9 +1,13 @@
 import Controlador.CategoriaControlador;
+import Controlador.PiezaControlador;
 import Controlador.ProveedorControlador;
 import Vista.CategoriaVista;
+import Vista.PiezaVista;
 import Vista.ProveedorVista;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
+import Vista.SuministroVista;
+import Controlador.SuministroControlador;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -13,22 +17,22 @@ public class App {
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.setBounds(50,50,300,200);
         CategoriaVista categoriaVista = new CategoriaVista();
-        //PiezaVista piezaVista = new PiezaVista();
+        PiezaVista piezaVista = new PiezaVista();
         ProveedorVista proveedorVista = new ProveedorVista();
-        //SuministraVista suministraVista = new SuministraVista();
+        SuministroVista suministraVista = new SuministroVista();
 
         //Añadir los paneles como pestañas
 
         tabbedPane.add("Categoria", categoriaVista);
-        //tabbedPane.add("Pieza", piezaVista);
+        tabbedPane.add("Pieza", piezaVista);
         tabbedPane.add("Proveedor", proveedorVista);
-        //tabbedPane.add("Suministra", suministraVista);
+        tabbedPane.add("Suministra", suministraVista);
 
         //Definir el controlador asociado
         CategoriaControlador categoriaControlador = new CategoriaControlador(categoriaVista);
-        //PiezaControlador piezaControlador = new PiezaControlador(piezaVista);
+        PiezaControlador piezaControlador = new PiezaControlador(piezaVista);
         ProveedorControlador proveedorControlador = new ProveedorControlador(proveedorVista);
-        //SuministraControaldor suministraControlador = new SuministraControlador(suministraVista);
+        SuministroControlador suministraControlador = new SuministroControlador(suministraVista);
 
         //Asociar el TabbedPane
 
