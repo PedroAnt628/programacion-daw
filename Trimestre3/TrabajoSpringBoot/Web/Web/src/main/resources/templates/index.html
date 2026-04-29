@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{navbar :: head('Libros Actuales')}"></head>
+<body class="bg-gray-100 font-sans">
+    <nav th:replace="~{navbar :: navbar}"></nav>
+
+    <main class="max-w-5xl mx-auto px-4 pb-12">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800">Catálogo de Libros</h1>
+        
+        <!-- th:if controla si se muestra este bloque (solo si hay libros) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" th:if="${!libros.isEmpty()}">
+            <!-- th:each recorre la lista enviada desde el controlador del Frontend -->
+            <div th:each="libro : ${libros}" class="bg-white rounded-lg shadow border overflow-hidden">
+                <!-- th:src inyecta dinámicamente la URL de la imagen del objeto libro -->
+                <img th:src="${libro.imagen}" alt="Portada" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="font-bold text-lg mb-1" th:text="${libro.titulo}">Título</h2>
+                    <p class="text-gray-600 text-sm mb-4" th:text="${libro.autor}">Autor</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-600 font-bold" th:text="${libro.precio + '€'}">0€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:if="${libros.isEmpty()}" class="text-center py-20 bg-white rounded-lg border">
+            <p class="text-gray-500">No hay libros disponibles en este momento.</p>
+        </div>
+    </main>
+</body>
+</html>

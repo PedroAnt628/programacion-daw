@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{navbar :: head('Editar Libro')}"></head>
+<body class="bg-gray-100 font-sans">
+    <nav th:replace="~{navbar :: navbar}"></nav>
+
+    <main class="max-w-2xl mx-auto px-4 pb-12">
+        <div class="bg-white p-8 rounded-lg shadow border">
+            <h1 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">Editar Datos del Libro</h1>
+            
+            <form th:action="@{/libros/editar/{id}(id=${libro.id})}" th:object="${libro}" method="post" class="space-y-4">
+                <div>
+                    <label class="block font-medium text-gray-700">Título</label>
+                    <input type="text" th:field="*{titulo}" required class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block font-medium text-gray-700">Autor</label>
+                    <input type="text" th:field="*{autor}" required class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-medium text-gray-700">Precio (€)</label>
+                        <input type="number" step="0.01" th:field="*{precio}" required class="w-full border rounded p-2">
+                    </div>
+                    <div>
+                        <label class="block font-medium text-gray-700">Año</label>
+                        <input type="number" th:field="*{anio}" required class="w-full border rounded p-2">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-medium text-gray-700">Imagen (URL)</label>
+                    <input type="url" th:field="*{imagen}" class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded font-bold hover:bg-blue-700 transition">Actualizar</button>
+                    <a href="/libros" class="bg-gray-200 text-gray-800 px-6 py-2 rounded font-bold hover:bg-gray-300 transition text-center">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

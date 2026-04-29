@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Mi Librería</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- Fragmento 'navbar': La barra de navegación común a todas las páginas -->
+<nav th:fragment="navbar" class="bg-slate-800 text-white p-4 mb-8 shadow-md">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+        <a href="/" class="text-xl font-bold">Mi Librería</a>
+        <div class="space-x-4">
+            <a href="/libros" class="hover:text-blue-400">Gestión</a>
+            <a href="http://localhost:5173" class="hover:text-blue-400">CV</a>
+        </div>
+    </div>
+</nav>
+</html>

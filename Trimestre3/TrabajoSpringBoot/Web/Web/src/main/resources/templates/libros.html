@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{navbar :: head('Libros')}"></head>
+<body class="bg-gray-100 font-sans">
+    <nav th:replace="~{navbar :: navbar}"></nav>
+
+    <main class="max-w-5xl mx-auto px-4 pb-12">
+        <h1 class="text-3xl font-bold mb-8 text-gray-800">Panel de Gestión</h1>
+
+        <!-- Notificaciones -->
+        <div th:if="${mensaje}" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
+            <p th:text="${mensaje}"></p>
+        </div>
+
+        <div class="space-y-8">
+            <!-- Sección Superior: Formulario-->
+            <section class="bg-white p-6 rounded-lg shadow border max-w-3xl mx-auto">
+                <div class="max-w-xl mx-auto">
+                    <h2 class="text-xl font-bold mb-4 border-b pb-2">Añadir Libro</h2>
+                    <!-- th:object vincula el formulario a un objeto 'Libro' vacío enviado por el controlador -->
+                    <form th:action="@{/libros}" th:object="${libro}" method="post" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Título</label>
+                            <input type="text" th:field="*{titulo}" required class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Autor</label>
+                            <input type="text" th:field="*{autor}" required class="w-full border rounded p-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Precio (€)</label>
+                                <input type="number" step="0.01" th:field="*{precio}" required class="w-full border rounded p-2">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700">Año</label>
+                                <input type="number" th:field="*{anio}" required class="w-full border rounded p-2">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Imagen (URL)</label>
+                            <input type="url" th:field="*{imagen}" class="w-full border rounded p-2">
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition">
+                            Guardar Libro
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Sección Inferior: Inventario -->
+            <section class="bg-white p-6 rounded-lg shadow border">
+                <h2 class="text-xl font-bold mb-4 border-b pb-2">Inventario de Libros</h2>
+
+
+                <!--Buscar por título-->
+                <form th:action="@{/libros/buscar}" method="get" class="flex items-center space-x-2 mb-6 bg-gray-50 p-3 rounded">
+                    <span class="text-sm font-bold text-gray-600">Buscar por título:</span>
+                    <input type="text" name="termino" placeholder="Escribe el título..." required class="border rounded p-1 flex-1">
+                    <input type="hidden" name="tipo" value="titulo">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-1 rounded text-sm hover:bg-blue-700">Buscar</button>
+                    <a href="/libros" class="text-xs text-blue-600 hover:underline">Limpiar</a>
+                </form>
+
+                <!--Buscar por autor-->
+                <form th:action="@{/libros/buscar}" method="get" class="flex items-center space-x-2 mb-6 bg-gray-50 p-3 rounded">
+                    <span class="text-sm font-bold text-gray-600">Buscar por autor:</span>
+                    <input type="text" name="termino" placeholder="Escribe el autor..." required class="border rounded p-1 flex-1">
+                    <input type="hidden" name="tipo" value="autor">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-1 rounded text-sm hover:bg-blue-700">Buscar</button>
+                    <a href="/libros" class="text-xs text-blue-600 hover:underline">Limpiar</a>
+                </form>
+
+                <!-- Buscador por años -->
+                <form th:action="@{/libros/buscar/anios}" method="get" class="flex items-center space-x-2 mb-6 bg-gray-50 p-3 rounded">
+                    <span class="text-sm font-bold text-gray-600">Buscar por años:</span>
+                    <input type="number" name="minimo" placeholder="Desde" required class="border rounded p-1 w-24">
+                    <input type="number" name="maximo" placeholder="Hasta" required class="border rounded p-1 w-24">
+                    <button type="submit" class="bg-gray-800 text-white px-4 py-1 rounded text-sm hover:bg-gray-700">Filtrar</button>
+                    <a href="/libros" class="text-xs text-blue-600 hover:underline">Limpiar filtro</a>
+                </form>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-600 text-sm uppercase font-bold">
+                                <th class="p-4">Título</th>
+                                <th class="p-4">Autor</th>
+                                <th class="p-4">Año</th>
+                                <th class="p-4">Precio</th>
+                                <th class="p-4 text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr th:each="libro : ${libros}" class="hover:bg-gray-50 transition">
+                                <td class="p-4 font-medium" th:text="${libro.titulo}">Título</td>
+                                <td class="p-4 text-gray-600" th:text="${libro.autor}">Autor</td>
+                                <td class="p-4 text-gray-500" th:text="${libro.anio}">Año</td>
+                                <td class="p-4 text-blue-600 font-bold" th:text="${libro.precio + '€'}">0€</td>
+                                <td class="p-4 text-right space-x-4">
+                                    <a th:href="@{/libros/editar/{id}(id=${libro.id})}" class="text-yellow-600 font-semibold hover:text-yellow-700">Editar</a>
+                                    <a th:href="@{/libros/borrar/{id}(id=${libro.id})}" class="text-red-600 font-semibold hover:text-red-700" onclick="return confirm('¿Deseas eliminar este libro?')">Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p th:if="${libros.isEmpty()}" class="text-center py-10 text-gray-500 italic">El inventario está vacío.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
